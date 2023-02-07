@@ -58,5 +58,5 @@ I learnt how to use boostrap in my project while comsidering the mobile-first ap
 ## Author
 
 - Website - [Mutiat Bashua](https://github.com/MutiatBash)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/MutiatBash)
-- Twitter - [@yourusername](https://www.twitter.com/Mu_ti_ah)
+- Frontend Mentor - [@MutiatBash](https://www.frontendmentor.io/profile/MutiatBash)
+- Twitter - [@Mu_ti_ah](https://www.twitter.com/Mu_ti_ah)
