@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.orange {
+  color: hsl(26, 100%, 55%);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+hr {
+  margin: 0;
+}
+.straight {
+  border: none;
+  border-radius: 5px;
+}
+.percent {
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+}
+.cart {
+  filter: brightness(0) invert(100%) sepia(40%) saturate(80%);
+  width: 15px;
+}
+/* .rewidth {
+  width: 300px;
+} */
+.sign {
+  background-color: hsl(223, 64%, 98%);
+  font-size: 0.9rem;
+}
+.nav-item {
+  font-size: 0.9rem;
+}
+.content {
+  font-size: 0.9rem;
+  color: hsl(220, 9%, 45%);
+}
+.text-muted-dollar {
+  color: hsl(220, 14%, 75%);
+}
+.orange-bg {
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  box-shadow: 6px 12px 20px hsl(25, 87%, 91%);
+  font-weight: 600;
+}
+.orange-bg:hover {
+  background-color: hsl(26, 94%, 51%);
+  color: white;
+}
+.dollar {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.thumbnail {
+  width: 20%;
+}
+.thumbnail.active {
+  border: 2px solid hsl(26, 96%, 51%);
+  opacity: 50%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(27, 92%, 52%);
+}
+@media screen and (max-width: 600px) {
+  .straight {
+    border-radius: 0;
+  }
+}
