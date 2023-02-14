@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body sticky-lg-top">
-      <div class="container-fluid px-lg-5 mx-lg-5 ms-lg-5 pt-1 sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body sticky-top">
+      <div
+        class="container-fluid px-lg-3 mx-lg-1 mx-md-4 mx-xl-5 ms-xl-3 pt-1 pb-1"
+      >
         <button
           class="navbar-toggle btn-sm border-0 bg-white d-lg-none"
           type="button"
@@ -35,11 +37,20 @@
           ><img src="./images/logo.svg" alt=""
         /></a>
         <div class="imgcart d-lg-none d-sm-block d-xs-block">
-          <img class="px-lg-3" src="./images/icon-cart.svg" alt="cart" />
+          <img
+            class="px-lg-3 cartt"
+            onclick="modal()"
+            src="./images/icon-cart.svg"
+            alt="cart"
+          />
+          <span
+            class="position-absolute translate-middle badge rounded-pill update hiden"
+            >0
+          </span>
         </div>
         <div class="imgcart d-lg-none d-sm-block d-xs-block">
           <img
-            class="me-lg-5 mx-lg-4"
+            class="me-lg-5 mx-lg-4 profile"
             src="./images/image-avatar.png"
             alt=""
             width="30px"
@@ -79,9 +90,17 @@
               </li>
             </ul>
             <div class="imgcart d-none d-lg-block">
-              <img class="px-4" src="./images/icon-cart.svg" alt="cart" />
               <img
-                class="me-5 mx-lg-4"
+                class="px-4 cartt"
+                onclick="modal()"
+                src="./images/icon-cart.svg"
+                alt="cart"
+              /><span
+                class="position-absolute mt-lg-2 me-lg-5 translate-middle badge rounded-pill update hiden"
+                >0
+              </span>
+              <img
+                class="me-5 mx-lg-4 profile"
                 src="./images/image-avatar.png"
                 alt=""
                 width="40px"
@@ -93,14 +112,52 @@
       </div>
     </nav>
     <hr />
+    <!-- Modal -->
+    <div id="md">
+      <div
+        class="modal-dialog mx-1 px-lg-3 py-2 px-sm-2 px-md-3 border-1 rounded-2 hide"
+        id="popcart"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title">Cart</h6>
+            <hr />
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal-dialog"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="empty">Cart is empty</p>
+          <div class="modbody cartbody">
+            <div class="cartdeets my-2">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                class="cartimg rounded-1"
+                alt=""
+              />
+              <p>
+                Fall Limited Edition Sneakers <span>$125.00</span> x 3
+                <bold class="bold">$375.00</bold>
+              </p>
+              <img src="./images/icon-delete.svg" alt="" />
+            </div>
+            <button type="button" class="btn cartbtn mx-auto d-flex mt-1">
+              Check out
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
-      class="card main mt-lg-5 my-lg-5 mx-lg-auto border-0 d-flex flex-grow-1 justify-content-lg-between"
+      class="card main mt-lg-5 my-lg-5 mx-lg-auto border-0 d-flex justify-content-lg-between"
       style="max-width: 1000px"
     >
       <div
-        class="row g-0 my-lg-3 mx-0 d-flex flex-grow-1 justify-content-lg-between"
+        class="row g-0 my-lg-3 mx-0 d-flex justify-content-lg-between mx-md-5 my-md-5"
       >
-        <div class="col-md-4 mx-lg-4 me-3 mt-md-0">
+        <div class="col-md-4 mx-lg-4 me-3 mt-sm-0 my-md-3 mx-md-4">
           <img
             src="./images/image-product-1.jpg"
             class="img-fluid straight"
@@ -131,22 +188,22 @@
             />
           </div>
         </div>
-        <div class="col-md-6 ms-lg-5 mx-lg-4">
+        <div class="col-md-6 ms-lg-5 mx-lg-4 mx-md-4 flex-grow-1">
           <div class="card-body ms-lg-5 ps-lg-5">
             <h6 class="orange">SNEAKER COMPANY</h6>
-            <h1 class="card-title fs-sm-5 fw-bolder">
+            <h1 class="card-title fs-sm-5 fw-bolder fs-md-6">
               Fall Limited Edition Sneakers
             </h1>
-            <p class="card-text content mt-4">
+            <p class="card-text content mt-4 mt-md-2 fs-md-6">
               These low-profile sneakers are your perfect casual wear companion.
               Featuring a durable rubber outer sole, they’ll withstand
               everything the weather can offer.
             </p>
             <div
-              class="flextext d-flex justify-content-between align-items-sm-between flex-lg-column flex-sm-row py-2"
+              class="flextext d-flex justify-content-between align-items-sm-between flex-lg-column flex-sm-row py-lg-2"
             >
               <div>
-                <span class="card-text dollar">$125.00</span>
+                <span class="card-text dollar fs-md-6">$125.00</span>
                 <small class="percent mx-2 px-2 rounded-1 align-self-center"
                   >50%</small
                 >
@@ -159,21 +216,34 @@
             </div>
 
             <div
-              class="btns d-grid gap-3 d-md-flex justify-content-md-between my-md-3"
+              class="btns d-grid gap-3 d-md-flex justify-content-sm-between my-md-2 my-sm-3 mt-sm-2"
             >
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn orange sign px-lg-3 py-sm-2">
+              <div
+                class="btn-group mt-sm-2"
+                role="group"
+                aria-label="Basic example"
+              >
+                <button
+                  type="button"
+                  class="btn minus orange sign px-lg-3 py-sm-2"
+                  onclick=""
+                >
                   <img src="./images/icon-minus.svg" alt="" />
                 </button>
-                <button type="button" class="btn sign px-lg-4 py-sm-2">
+                <button type="button" class="btn zero sign px-lg-4 py-sm-2">
                   0
                 </button>
-                <button type="button" class="btn orange sign px-lg-3 py-sm-2">
+                <button
+                  type="button"
+                  class="btn plus orange sign px-lg-3 py-sm-2"
+                  onclick=""
+                >
                   <img src="./images/icon-plus.svg" alt="" />
                 </button>
               </div>
               <button
                 class="btn orange-bg px-md-5 py-sm-2 btn-lg mb-2"
+                onclick="addCart()"
                 type="submit"
               >
                 <img class="cart me-2" src="./images/icon-cart.svg" alt="" />
@@ -191,6 +261,7 @@
       >. Coded by
       <a href="https://github.com/MutiatBash" target="_blank">Mutiat Bashua</a>.
     </div>
+    <script src="index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
